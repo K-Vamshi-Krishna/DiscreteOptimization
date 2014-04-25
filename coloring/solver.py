@@ -30,6 +30,7 @@ def solve_it(input_data):
 	for i in range(0,node_count):
 		color[i] = solver.IntVar(digits,"")
 	
+	# Adds the constraints for each of the edge
 	#solver.Add(maximum)
 	for a,b in edges:
 		solver.Add(color[a]!=color[b])
